@@ -34,23 +34,12 @@ function average(firtsTest, secondTest) {
 
 
 
-function printStudentAverage(student) {
-   
-    return (alert(`A média do(a) aluno(a) ${student.name} é: ${average(student.firtsTest, student.secondTest)}`))
-}
-
-
 for (const student of students) {
-    let averageMessage = printStudentAverage(student)
-    alert(averageMessage)
-   
-    if (average >= 7) {
-        alert(`Parabéns ${student.name}! Você foi aprovado(a) no concurso!`)
+
+    if (average(student.firtsTest, student.secondTest)>=7) {
+        alert(`A média do(a) aluno(a) ${student.name} é: ${average(student.firtsTest, student.secondTest)}\n Parabéns ${student.name}! Você foi aprovado(a) no concurso!`)
     }else{
-        alert(`Não foi  dessa vez ${student.name}. Tente novamente!`)
+        alert(`A média do(a) aluno(a) ${student.name} é: ${average(student.firtsTest, student.secondTest)}\n Não foi  dessa vez ${student.name}. Tente novamente!`)
     }  
 }
 
-
-
-  console.log(average())
